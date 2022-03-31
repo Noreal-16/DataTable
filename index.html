@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="dataTable" class="datatable">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Status</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox"></td>
+                <td><span class="avaliable"></span></td>
+                <td>Alex Nole</td>
+                <td>CEO</td>
+                <td>Ecuador</td>
+                <td>28</td>
+                <td>16/08/1994</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox"></td>
+                <td><span class="away"></span></td>
+                <td>Alex Nole</td>
+                <td>CEO</td>
+                <td>Ecuador</td>
+                <td>28</td>
+                <td>16/08/1994</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox"></td>
+                <td><span class="avaliable"></span></td>
+                <td>Alex Nole</td>
+                <td>CEO</td>
+                <td>Ecuador</td>
+                <td>28</td>
+                <td>16/08/1994</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox"></td>
+                <td><span class="avaliable"></span></td>
+                <td>Alex Nole</td>
+                <td>CEO</td>
+                <td>Ecuador</td>
+                <td>28</td>
+                <td>16/08/1994</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox"></td>
+                <td><span class="away"></span></td>
+                <td>Carlos</td>
+                <td>CEO</td>
+                <td>Ecuador</td>
+                <td>28</td>
+                <td>16/08/1994</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox"></td>
+                <td><span class="avaliable"></span></td>
+                <td>Maria </td>
+                <td>CEO</td>
+                <td>Ecuador</td>
+                <td>28</td>
+                <td>16/08/1994</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+    <script>
+        const dt =  new DataTable('#dataTable', [
+            {
+                id: 'bAdd',
+                Text: 'agregar',
+                icon: 'add_circle',
+                acction: function() {
+                    console.log("agregar nuevo dato");
+                }
+            },
+            {
+                id: 'bDelete',
+                Text: 'eliminar',
+                icon: 'delete',
+                acction: function() {
+                    const elementos = dt.getSelected();
+                    console.log(elementos);
+                }
+            },
+            
+        ]);
+        dt.parse();
+    </script>
+</body>
+
+</html>
